@@ -161,6 +161,8 @@ function encontraCadastros(dadosLogin) {
     // VARIAVEL CONTENDO OS CADASTROS
     const cadastro = localStorage.getItem("loginAutenticaTesteStaticVersion");
 
+    if(cadastro === null) {throw new Error("Email não encontrado")}
+
     // VARIVEIS USADAS PARA IDENTIFICAR EMAIL E SENHA DO LOGIN COMO ENCONTRADOS OU NÃO ENCONTRADAS
     let email = false;
     let senha = false;
